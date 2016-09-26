@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    {% include session-nav.html %}
+    <section class="session-main">
+      <div class="container">
+        <div class="prose">
+          <h2>{{page.title}}</h2>
+          <div class="time">{{page.time}}</div>
+          <h3>{{page.type}}</h3>
+          <h4>
+            {% for person in page.people %}
+              <span class="person">{{person}}</span> {% if forloop.index != forloop.length %}-{% endif %}
+            {% endfor %}
+          </h4>
+          {% if page.moderator %}
+          <h4>Moderator: <span class="person">{{page.moderator}}</span></h4>
+          {% endif %}
+
+          <p>{{content | markdownify}}</p>
+        </div>
+      </div>
+    </section>
+    {% include footer.html %}
+    </body>
+</html>
