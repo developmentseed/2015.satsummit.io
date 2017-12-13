@@ -1,6 +1,8 @@
-# SatSummit 2015
+# #SatSummit 2015
 
-Archived version.
+Archived website for #SatSummit 2015.
+
+## Development environment
 
 Run with:
 ```
